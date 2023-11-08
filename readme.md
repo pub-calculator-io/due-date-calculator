@@ -12,9 +12,8 @@ This online due date calculator helps moms-to-be calculate their due date based 
 3. Activate the [Due Date Calculator](https://www.calculator.io/due-date-calculator/ "Due Date Calculator Homepage") plugin through the "Plugins" menu in WordPress.
 
 ## Usage
-* Add the shortcode `[ci_due_date_calculator]` to your page or post and configure default mortgage parameters.
-* If you are using widgets, just add the Due Date Calculator to the sidebar through the `Appearance -> Widgets -> Due Date Calculator` menu in WordPress.
-* Add the following code: `<?php display_ci_due_date_calculator(); ?>` to your template where you would like the Due Date Calculator to appear.
+* Add the shortcode `[ci_due_date_calculator]` to your page, post or sidebar.
+* Or add the following code: `<?php display_ci_due_date_calculator(); ?>` to your template where you would like the Due Date Calculator to appear.
 
 ## Libraries in Use
 1. https://mathjs.org/
