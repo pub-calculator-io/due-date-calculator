@@ -1,4 +1,4 @@
-# Due Date Calculator WordPress Widget by [Calculator.iO](https://www.calculator.io/ "Calculator.iO Homepage")
+# Due Date Calculator Widget for WordPress
 
 This online due date calculator helps moms-to-be calculate their due date based on their last menstrual period or the date of conception.
 
