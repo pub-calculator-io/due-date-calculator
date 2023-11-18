@@ -1,4 +1,4 @@
-=== Due Date Calculator by Calculator.iO ===
+=== Due Date Calculator ===
 Contributors: calculatorio
 Tags: due date calculator, pregnancy due date estimator, calculate baby due date, expected delivery date calculator, calculate EDD from LMP, conception date to due date, gestational age calculator, pregnancy timeline calculator, childbirth date predictor, IVF due date calculation
 Requires at least: 5.0
