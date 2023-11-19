@@ -7,7 +7,7 @@ This online due date calculator helps moms-to-be calculate their due date based 
 
 ## Installation
 
-1. [Download](https://github.com/pub-calculator-io/age-calculator/archive/refs/heads/master.zip) the ZIP file of this repository.
+1. [Download](https://github.com/pub-calculator-io/due-date-calculator/archive/refs/heads/master.zip) the ZIP file of this repository.
 2. Upload the /due-date-calculator-master/ folder to the /wp-content/plugins/ directory.
 3. Activate the [Due Date Calculator](https://www.calculator.io/due-date-calculator/ "Due Date Calculator Homepage") plugin through the "Plugins" menu in WordPress.
 
