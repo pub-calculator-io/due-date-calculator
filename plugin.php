@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Due Date Calculator by www.calculator.io
+Plugin Name: CI Due date calculator
 Plugin URI: https://www.calculator.io/due-date-calculator/
 Description: This online due date calculator helps moms-to-be calculate their due date based on their last menstrual period or the date of conception.
 Version: 1.0.0
