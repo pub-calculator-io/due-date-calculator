@@ -24,7 +24,6 @@ Add the following code to your template where you would like the Due Date Calcul
 == Screenshots ==
 
 1. The Due Date Calculator Input Form.
-2. The Due Date Calculator Calculation Results.
 
 == Installation ==
 

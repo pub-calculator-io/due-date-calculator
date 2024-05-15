@@ -28,7 +28,7 @@
             <div class="calculator-setting" id="calculator_form">
                 <div class="calculator-content col">
                 	<div class="input-wrapper row">
-                		<label class="input col ">
+                		<label class="input col pregnancy-calculator,conception-date-calculator,period-calculator,ovulation-calculator,pregnancy-weight-gain-calculator">
                 			<p class="input__title">Calculate Based On</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -67,7 +67,7 @@
                 		</label>
                 	</div>
                 	<div class="based_on related-to-based_on-0 input-wrapper">
-                		<label class="input col ">
+                		<label class="input col pregnancy-calculator,conception-date-calculator,period-calculator,ovulation-calculator,pregnancy-weight-gain-calculator">
                 			<p class="input__title">Average Cycles Length</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -163,7 +163,7 @@
                 		</label>
                 	</div>
                 	<div class="based_on related-item-hidden related-to-based_on-1 input-wrapper row">
-                		<label class="input col   ">
+                		<label class="input col pregnancy-calculator,conception-date-calculator,period-calculator,ovulation-calculator,pregnancy-weight-gain-calculator  ">
                 			<p class="input__title">Length of Pregnancy at the Time</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="pregnancy_weeks" value="12"  />
@@ -171,7 +171,7 @@
                 			</div>
                 		
                 		
-                		</label>		<label class="input col   ">
+                		</label>		<label class="input col pregnancy-calculator,conception-date-calculator,period-calculator,ovulation-calculator,pregnancy-weight-gain-calculator  ">
                 			
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="pregnancy_days" value="3"  />
@@ -215,7 +215,7 @@
                 		</label>
                 	</div>
                 	<div class="based_on related-item-hidden related-to-based_on-3 input-wrapper">
-                		<label class="input col ">
+                		<label class="input col pregnancy-calculator,conception-date-calculator,period-calculator,ovulation-calculator,pregnancy-weight-gain-calculator">
                 			<p class="input__title">Embrio Age</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -237,7 +237,7 @@
                 <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
                 
                 
-                		<button class="system-switcher system-switcher--format" onclick="toggleSystem(this)">
+                		<button class="system-switcher system-switcher--format" onclick="toggleSystem(this)" aria-label="Switch System">
                 			<div class="system-switcher__circle"></div>
                 			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M7.84254 5.61418C7.84254 4.72269 8.56524 4 9.45673 4C10.7869 4 11.5462 5.51856 10.7481 6.58269L7.84254 10.4567H11.4745M3 5.29135L4.08967 4.41961C4.30105 4.2505 4.61418 4.401 4.61418 4.6717V10.4567" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -258,15 +258,17 @@
                 		</script>
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculate(this)">Calculate</button>
+                	<button class="button button--primary ml-auto" onclick="calculate(this); animateElements();" data-action="calculate" id="action-button">Calculate</button>
                 </div>
                 
                 
                 
-                	<link rel="stylesheet" href="./assets/css/air-datepicker.css" />
-                	<script type="text/javascript" src="./assets/js/lib/air-datepicker.js" id="datepicker_script"></script>
                 
-                	<script type="text/javascript" src="./assets/js/calculator.js"></script>
+                
+                	<link rel="stylesheet" href="./assets/css/air-datepicker.min.css" defer />
+                	<script type="text/javascript" src="./assets/js/lib/air-datepicker.js" id="datepicker_script" defer></script>
+                
+                	<script type="text/javascript" src="./assets/js/calculator.js" defer></script>
             </div>
         </div>
     </div>
@@ -281,9 +283,8 @@
         </svg>
         		<p class="calculator-error__title">There was an error with your calculation.</p>
         	</div>
-        	<div class="col" id="error-list">
-        	</div>
-        </div>        <span id="calculator_result"><div class="calculator-result col">
+        	<div class="col" id="error-list"></div>
+        </div>        <span id="calculator_result">	<div class="calculator-result col">
 	<div class="result-table__wrapper">
 		<table class="result-table">
 			<thead class="dark">
@@ -298,14 +299,14 @@
 					</td>
 				</tr>
 			</tbody>
-			<tbody id="result" style="display: none;">
+			<tbody id="result" style="display: none;" class="animate">
 				<tr>
 					<th class="semibold">The estimated due date</th>
 					<td class="semibold" id="estimate-due-date">Oct 28, 2023</td>
 				</tr>
 				<tr>
 					<th>Currently</th>
-					<td id="current-date">Week #19</td>
+					<td id="current-date">Week 19</td>
 				</tr>
 				<tr>
 					<th>Trimester</th>
@@ -317,7 +318,7 @@
 				</tr>
 				<tr>
 					<th>Your baby was likely conceived on</th>
-					<td id="conceive-date">	Feb 4, 2023</td>
+					<td id="conceive-date">Feb 4, 2023</td>
 				</tr>
 			</tbody>
 		</table>
@@ -338,49 +339,49 @@
 				</tr>
 				<tr>
 					<td>1</td>
-					<td class="short" id="week-1-date">Jan 22, 2023 - Jan 28, 2023</td>
+					<td class="short animate" id="week-1-date">Jan 22, 2023 - Jan 28, 2023</td>
 					<td class="short">First</td>
 					<td class="short"></td>
 				</tr>
 				<tr>
 					<td>2</td>
-					<td class="short" id="week-3-date">Feb 5, 2023 - Feb 11, 2023</td>
+					<td class="short animate" id="week-3-date">Feb 5, 2023 - Feb 11, 2023</td>
 					<td class="short">First</td>
 					<td class="short">Baby conceived</td>
 				</tr>
 				<tr>
 					<td>3</td>
-					<td class="short" id="week-4-date">Feb 12, 2023 - Feb 18, 2023</td>
+					<td class="short animate" id="week-4-date">Feb 12, 2023 - Feb 18, 2023</td>
 					<td class="short">First</td>
 					<td class="short">Pregnancy test positive</td>
 				</tr>
 				<tr>
 					<td>4</td>
-					<td class="short" id="week-6-date">Feb 26, 2023 - Mar 11, 2023</td>
+					<td class="short animate" id="week-6-date">Feb 26, 2023 - Mar 11, 2023</td>
 					<td class="short">First</td>
 					<td class="short">Heartbeat detectable by ultrasound</td>
 				</tr>
 				<tr>
 					<td>5</td>
-					<td class="short" id="week-13-date">Apr 16, 2023 - Apr 22, 2023</td>
+					<td class="short animate" id="week-13-date">Apr 16, 2023 - Apr 22, 2023</td>
 					<td class="short">Second</td>
 					<td class="short">Miscarriage risk decreases</td>
 				</tr>
 				<tr>
 					<td>6</td>
-					<td class="short" id="week-18-date">May 21, 2023 - Jun 17, 2023</td>
+					<td class="short animate" id="week-18-date">May 21, 2023 - Jun 17, 2023</td>
 					<td class="short">Second</td>
 					<td class="short">Baby begins making noticeable movements, can hear sounds, and gender can be found out.</td>
 				</tr>
 				<tr>
 					<td>7</td>
-					<td class="short" id="week-23-date">Jun 25, 2023 - Jul 1, 2023</td>
+					<td class="short animate" id="week-23-date">Jun 25, 2023 - Jul 1, 2023</td>
 					<td class="short">Second</td>
 					<td class="short">Premature baby may survive</td>
 				</tr>
 				<tr>
 					<td>8</td>
-					<td class="short" id="week-28-date">Jul 30, 2023 - Aug 5, 2023</td>
+					<td class="short animate" id="week-28-date">Jul 30, 2023 - Aug 5, 2023</td>
 					<td class="short">Third</td>
 					<td class="short">Baby can breathe</td>
 				</tr>

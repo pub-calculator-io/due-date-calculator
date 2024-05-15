@@ -14,7 +14,7 @@ function calculate() {
 
 	else if(basedOn === 0) {
 		if(!firstDay) {
-			return input.error('first_day', 'Please enter a first day', true);
+			return input.error('first_day', 'Enter the first day', true);
 		}
 		else {
 			const date = new Date(firstDay);
@@ -26,10 +26,10 @@ function calculate() {
 	}
 	else if(basedOn === 1) {
 		if(!ultrasoundDate) {
-			input.error('ultrasound_date', 'Please enter a ultrasound date');
+			input.error('ultrasound_date', 'Enter the date of the ultrasound');
 		}
 		if(!pregnancyWeeks) {
-			input.error('pregnancy_weeks', 'Please length of pregnancy at the time');
+			input.error('pregnancy_weeks', 'Enter the pregnancy length at that time');
 		}
 		if(!input.valid()) return;
 		const date = ultrasoundDate;
@@ -65,7 +65,7 @@ function showResult(date){
 		_('not-pregnant').style = 'display: block';
 		_('result').style = 'display: none';
 		_('milestones').style = 'display: none';
-		output.val('You probably are not pregnant yet.').set('not-pregnant-result');
+		output.val(`It's likely that you are not pregnant yet.`).set('not-pregnant-result');
 	}
 	else {
 		_('not-pregnant').style = 'display: none';
@@ -83,7 +83,7 @@ function showResult(date){
 				trimester = 'Third';
 		}
 		const currentWeek = (Math.floor(days / 7) + 1);
-		let size = 'On average, your baby weight less than 1 gram at this stage.';
+		let size = 'On average, your baby weighs less than 1 gram at this stage.';
 		let babySize = BABY_SIZE_CHART.find(item => item.week === currentWeek - 1);
 		if(babySize) {
 			size = `${babySize.usLength} (${babySize.euLength}) and ${babySize.usWeight} (${babySize.euWeight})`;
@@ -107,23 +107,6 @@ function showResult(date){
 		output.val('Week {#23}')
 			.replace('{#23}', `#${currentWeek}`).set('current-date')
 	}
-}
-
-function plural(number, label) {
-	/*Days*/
-	if(number === 0) return '';
-
-	if (label === 'd') return number === 1 ? number + ' day' : number + ' days';
-
-	/*Week*/
-	if (label === 'w') return number === 1 ? number + ' week' : number + ' weeks';
-
-	/*Month*/
-	if (label === 'm') return number === 1 ? number + ' month' : number + ' months';
-
-	/*Year*/
-	if (label === 'y') return number === 1 ? number + ' year' : number + ' years';
-
 }
 
 function convertDateToDMY(date) {

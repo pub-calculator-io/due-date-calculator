@@ -3,7 +3,6 @@
 This online due date calculator helps moms-to-be calculate their due date based on their last menstrual period or the date of conception.
 
 ![Due Date Calculator Input Form](/assets/images/screenshot-1.png "Due Date Calculator Input Form")
-![Due Date Calculator Calculation Results](/assets/images/screenshot-2.png "Due Date Calculator Calculation Results")
 
 ## Installation
 
